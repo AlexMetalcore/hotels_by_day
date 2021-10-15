@@ -53,5 +53,6 @@ class Mankind {
 
 }
 ```
+execute ```docker-compose up -d```
 
-run console ``php index.php``:
+open url ```http://localhost:8080```
