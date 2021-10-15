@@ -78,6 +78,6 @@ class Mankind
             }
         }
 
-        return 100 * count($mans) / count($this->persons) . '%';
+        return round(100 * count($mans) / count($this->persons), 2) . '%';
     }
 }
