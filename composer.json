@@ -1,0 +1,16 @@
+{
+    "name": "alex/testapp",
+    "description": "test app",
+    "authors": [
+        {
+            "name": "AlexMetalcore",
+            "email": "alexandrov141089@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
