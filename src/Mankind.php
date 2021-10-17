@@ -6,7 +6,7 @@ namespace App;
 
 class Mankind
 {
-    private static array $instances = [];
+    private static ?Mankind $instance = null;
 
     private array $persons = [];
 
@@ -34,13 +34,11 @@ class Mankind
 
     public static function getInstance(ParserFileInterface $parserFile): self
     {
-        $class = static::class;
-
-        if (!isset(self::$instances[$class])) {
-            self::$instances[$class] = new static();
+        if (self::$instance === null) {
+            self::$instance = new self();
         }
 
-        $mankind = self::$instances[$class];
+        $mankind = self::$instance;
         $mankind->parserFile = $parserFile;
 
         return $mankind;
