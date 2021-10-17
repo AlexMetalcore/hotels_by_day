@@ -6,6 +6,9 @@ namespace App;
 
 class Person
 {
+    public CONST MAN = 'M';
+    public CONST FEMALE = 'F';
+
     private int $id;
     private string $name;
     private string $surname;
@@ -63,8 +66,8 @@ class Person
 
     public function getPersonAgeDays(): string
     {
-        $birthday = new \DateTime(date('Y-m-d', strtotime($this->birthDate)));
+        $birthDay = new \DateTime(date('Y-m-d', strtotime($this->birthDate)));
 
-        return 'Age in days: ' . $birthday->diff(new \DateTime())->days;
+        return 'Age in days: ' . $birthDay->diff(new \DateTime())->days;
     }
 }

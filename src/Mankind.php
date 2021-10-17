@@ -71,7 +71,7 @@ class Mankind
 
         foreach ($this->persons as $person) {
             /* @var Person $person */
-            if ($person->getSex() === 'M') {
+            if ($person->getSex() === Person::MAN) {
                 $mans[] = $person;
             }
         }
