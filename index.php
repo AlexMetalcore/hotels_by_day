@@ -35,11 +35,13 @@ try {
 
     echo 'Get the percentage of Men in Mankind - ' . $mankind->getPercentageOfMenInMankind() . PHP_EOL;
 
-    echo 'Time usage ' . round(microtime(true) - $start, 2) . ' s' . PHP_EOL;
-    echo 'Memory usage ' . round(memory_get_usage() / (1024 * 1024)) . ' Mb' . PHP_EOL;
-    echo 'Max memory usage ' . round(memory_get_peak_usage() / (1024 * 1024)) . ' Mb' . PHP_EOL;
+    echo 'Time usage - ' . round(microtime(true) - $start, 2) . ' s' . PHP_EOL;
+    echo 'Memory usage - ' . round(memory_get_usage() / (1024 * 1024)) . ' Mb' . PHP_EOL;
+    echo 'Max memory usage - ' . round(memory_get_peak_usage() / (1024 * 1024)) . ' Mb' . PHP_EOL;
 
     echo 'File size - ' . round($filesize / (1024 * 1024)) . ' Mb' . PHP_EOL;
+
+    unlink($file);
 
 } catch (Exception $e) {
     echo $e->getMessage() . PHP_EOL;
