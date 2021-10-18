@@ -53,6 +53,6 @@ class Mankind {
 
 }
 ```
-execute ```composer update && docker-compose up -d```
+execute ```composer install && docker-compose up -d```
 
 open url ```http://localhost:8080```
